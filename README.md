@@ -52,10 +52,33 @@ Figure -02 HALF Subtractor
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:*/
+Developed by:V.Yogesh RegisterNumber:212223230250*/
+## Half Adder
+```
+module half_adder(a,b,sum,carry);
+input a,b;
+output sum,carry; 
+assign sum = a^b;
+assign carry = a & b;
+endmodule
+```
+## Half Subtractor
+```
+module halfsub(a,b,D,Bo);
+input a,b;
+output D,Bo; // Outputs sum and carry for half adder:Outputs difference D,Borrow Bo for half subtractor
+assign D = a ^ b;
+  assign Bo = ~a & b;
+endmodule
+```
 
 **RTL Schematic**
+![Screenshot 2024-03-22 141531](https://github.com/Yogesh-Yogi-1/HALF_ADDER_SUBTRACTOR/assets/148514598/a3b7e82d-1418-4084-a001-83c2a52a61aa)
+![Screenshot 2024-03-22 142432](https://github.com/Yogesh-Yogi-1/HALF_ADDER_SUBTRACTOR/assets/148514598/e48078f7-5828-4697-a69a-eb19b0aa7120)
 
 **Output/TIMING Waveform**
+![Screenshot 2024-03-18 085241](https://github.com/Yogesh-Yogi-1/HALF_ADDER_SUBTRACTOR/assets/148514598/a7051551-5684-4b10-8256-23fe3de95ecb)
+![Screenshot 2024-03-18 085943](https://github.com/Yogesh-Yogi-1/HALF_ADDER_SUBTRACTOR/assets/148514598/d6648ae9-3a68-421d-8d4a-be96184c1b62)
 
 **Result:**
+Thus half adder and half subtractor is designed and verified.
